@@ -1,7 +1,15 @@
 import React from "react";
 
 const HomePage: React.FC = () => {
-  return <div>Home1</div>;
+  return (
+    <div>
+      <section style={{ height: "100vh" }}>section</section>
+      <section style={{ height: "100vh" }}>section</section>
+      <section style={{ height: "100vh" }}>section</section>
+      <section style={{ height: "100vh" }}>section</section>
+      <section style={{ height: "100vh" }}>section</section>
+    </div>
+  );
 };
 
 export default HomePage;
