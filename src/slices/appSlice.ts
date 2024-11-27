@@ -1,10 +1,10 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 export interface AppState {
-  loading?: boolean;
+  firstMount?: boolean;
 }
 
 const initialState: AppState = {
-  loading: false,
+  firstMount: true,
 };
 
 export const appSlice = createSlice({
