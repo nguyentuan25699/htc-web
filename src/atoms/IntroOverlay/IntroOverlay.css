@@ -1,6 +1,6 @@
 /* Nền đen bao phủ toàn màn hình */
 .logo-overlay {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
@@ -11,7 +11,7 @@
 }
 
 .logo-overlay1 {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
@@ -22,7 +22,7 @@
 }
 
 .logo-mask {
-    position: absolute;
+    position: fixed;
     width: 100vw;
     height: 100vh;
     background-color: transparent;

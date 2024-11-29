@@ -15,8 +15,10 @@ const MainLayout: React.FC<Props> = ({ children }) => {
   useTitle("HTC Team");
 
   useEffect(() => {
+    !loadedIntro && window.scrollTo(0, 0);
+
     const timeout = setTimeout(() => {
-      setLoadedIntro(true);
+      !loadedIntro && setLoadedIntro(true);
     }, 4000);
 
     return () => clearTimeout(timeout);
@@ -30,10 +32,10 @@ const MainLayout: React.FC<Props> = ({ children }) => {
 
         <ScrollProgressBar />
 
-        {loadedIntro && <>{children}</>}
+        {children}
       </div>
 
-      {loadedIntro && <Footer />}
+      <Footer />
     </div>
   );
 };
