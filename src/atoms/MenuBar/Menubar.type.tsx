@@ -5,7 +5,7 @@ export type MenuItem = {
   url: string;
 };
 
-export const MenuArray: MenuItem[] = [
+export const MENU_ARRAY: MenuItem[] = [
   { title: "Home", url: routesName.ROOT },
   { title: "Gallery", url: routesName.ROOT },
   { title: "Order", url: routesName.ROOT },

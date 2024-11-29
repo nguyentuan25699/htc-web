@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Menubar.css";
-import { MenuArray } from "./Menubar.type";
+import { MENU_ARRAY } from "./Menubar.type";
 import { useNavigate } from "react-router-dom";
 import logoWhite from "src/assets/images/HTC_logo_White_1.png";
 
@@ -30,9 +30,9 @@ const Menubar: React.FC = () => {
 
       <nav className="nav">
         <ul className="nav-list">
-          {MenuArray.map((m) => {
+          {MENU_ARRAY.map((m) => {
             return (
-              <li className="nav-item" onClick={() => handleNavigate(m.url)}>
+              <li key={m.title} className="nav-item" onClick={() => handleNavigate(m.url)}>
                 {m.title}
               </li>
             );
@@ -55,10 +55,7 @@ const Menubar: React.FC = () => {
           className="bi bi-list"
           viewBox="0 0 16 16"
         >
-          <path
-            fill-rule="evenodd"
-            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
-          />
+          <path d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
         </svg>
       </div>
     </div>
