@@ -18,7 +18,7 @@ const HomeBanner: React.FC = () => {
         }}
       >
         <div className="content-left-top">Escape and Explore</div>
-        <p>Embark on adventures, partake in battles, and make new encounters.</p>
+        <p className="content-description">Embark on adventures, partake in battles, and make new encounters.</p>
       </div>
 
       <div

@@ -19,7 +19,9 @@ code {
   --black-color: #000000;
   --footer-color: #2A2A2A;
   --grey-color: #454545;
-  --white-color: #ffffff
+  --white-color: #ffffff;
+  --vision-blue: rgb(66, 143, 247);
+  --red-color: rgb(250, 84, 84)
 }
 
 ::-webkit-scrollbar {
