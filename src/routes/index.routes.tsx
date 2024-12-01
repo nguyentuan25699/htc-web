@@ -8,8 +8,6 @@ const renderRoutes = (routes: IRouterData[]) => {
     <>
       {routes
         ? routes.map((route: IRouterData, index: number) => {
-            console.log(route);
-
             const Layout = route.layout || Fragment;
             const Page = route.component || Fragment;
 
