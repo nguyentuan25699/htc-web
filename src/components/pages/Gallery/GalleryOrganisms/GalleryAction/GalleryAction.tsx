@@ -6,15 +6,15 @@ import ArtistList from "../ArtistList";
 import { GalleryContext } from "../../context";
 
 const GalleryAction: React.FC = () => {
-  const { listArtist } = useContext(GalleryContext);
+  const { tab, images, listArtist, handleChangeTab } = useContext(GalleryContext);
   return (
     <div className="gallery-action-container">
-      <Tabs>
+      <Tabs activeKey={tab} onSelect={(tab) => tab && handleChangeTab(tab)}>
         <Tab
           eventKey="Gallery"
           title={
             <>
-              Gallery <span style={{ fontSize: "15px" }}>(1)</span>
+              Gallery <span style={{ fontSize: "15px" }}>({images?.length})</span>
             </>
           }
         >
