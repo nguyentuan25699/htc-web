@@ -5,6 +5,7 @@ import Menubar from "src/components/atoms/MenuBar";
 import ScrollProgressBar from "src/components/atoms/ScrollProgressBar";
 import useTitle from "src/utilities/hooks/useTitle";
 import "./MainLayout.css";
+import ScrollTop from "src/components/atoms/ScrollTop";
 
 type Props = {
   children?: React.ReactNode;
@@ -37,6 +38,8 @@ const MainLayout: React.FC<Props> = ({ children }) => {
       </div>
 
       <Footer />
+
+      <ScrollTop />
     </div>
   );
 };
