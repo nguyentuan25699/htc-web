@@ -1,7 +1,8 @@
-import React, { Fragment } from "react";
+import { Fragment } from "react";
 import { Route, Routes } from "react-router-dom";
 import { routesData } from "./data.routes";
 import { IRouterData } from "./type.routes";
+import NotFound from "src/components/pages/NotFound";
 
 const renderRoutes = (routes: IRouterData[]) => {
   return (
@@ -24,6 +25,8 @@ const renderRoutes = (routes: IRouterData[]) => {
             );
           })
         : null}
+
+      <Route path="*" element={<NotFound />} />
     </>
   );
 };

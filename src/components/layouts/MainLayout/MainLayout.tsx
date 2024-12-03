@@ -1,17 +1,22 @@
 import React, { useEffect, useState } from "react";
+import { ClipLoader } from "react-spinners";
+import { useAppSelector } from "src/app/appHooks";
+import { RootState } from "src/app/store";
 import Footer from "src/components/atoms/Footer";
 import IntroOverlay from "src/components/atoms/IntroOverlay";
 import Menubar from "src/components/atoms/MenuBar";
 import ScrollProgressBar from "src/components/atoms/ScrollProgressBar";
+import ScrollTop from "src/components/atoms/ScrollTop";
 import useTitle from "src/utilities/hooks/useTitle";
 import "./MainLayout.css";
-import ScrollTop from "src/components/atoms/ScrollTop";
 
 type Props = {
   children?: React.ReactNode;
 };
 
 const MainLayout: React.FC<Props> = ({ children }) => {
+  const { loading } = useAppSelector((state: RootState) => state.app);
+
   const [loadedIntro, setLoadedIntro] = useState<boolean>(false);
   useTitle("HTC Studio");
 
@@ -28,6 +33,10 @@ const MainLayout: React.FC<Props> = ({ children }) => {
 
   return (
     <div style={{ position: "relative" }}>
+      <div className={`global-loading-container ${loading ? "show" : "hide"}`}>
+        <ClipLoader size={60} color={"rgb(250, 84, 84)"} loading={loading} />
+      </div>
+
       <IntroOverlay />
       <div className="main-layout">
         <Menubar />
