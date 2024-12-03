@@ -6,8 +6,8 @@ const fetchImages = (start: number, limit: number): Promise<ImageList[]> => {
     setTimeout(() => {
       const newImages = Array.from({ length: limit }, (_, index) => ({
         id: Math.floor(Math.random() * 100) + Math.random() * index,
-        src: `https://picsum.photos/id/${start + index}/${Math.floor(Math.random() * 100) + 100}/${
-          Math.floor(Math.random() * 200) + 100
+        src: `https://picsum.photos/id/${start + index}/${Math.floor(Math.random() * 100) + 1000}/${
+          Math.floor(Math.random() * 200) + 2000
         }`,
         alt: `Random Image ${start + index}`,
       }));
