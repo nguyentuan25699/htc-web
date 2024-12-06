@@ -7,7 +7,7 @@ const HomeBanner: React.FC = () => {
   const { scrollPosition } = useContext(HomeContext);
 
   return (
-    <div className="banner-container">
+    <div className="banner-container animate-me">
       <img src={banner} alt="banner" className="home-banner" />
 
       <div

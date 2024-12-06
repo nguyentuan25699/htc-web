@@ -1,6 +1,18 @@
+.modal-preview-container {
+    text-align: center;
+    position: relative;
+}
+
 .modal-preview-container .carousel-inner {
     width: 100%;
-    height: 80vh !important;
+    height: 70vh !important;
+}
+
+.image-preview {
+    width: 100%;
+    height: auto;
+    max-height: 70vh;
+    object-fit: contain;
 }
 
 .modal-preview-container .carousel-item-next,
@@ -12,36 +24,27 @@
     align-items: center;
 }
 
-.thumbnail-list {
-    overflow-x: auto;
-    padding: 8px 0;
-    white-space: nowrap;
+.carousel-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
 }
 
-.thumbnail {
-    transition: transform 0.2s ease-in-out;
-    width: 60px;
-    height: 40px;
-    object-fit: cover;
+.carousel-btn {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 24px;
+    padding: 10px;
     cursor: pointer;
-    border-radius: 4px;
-    margin: 0 8px;
+    border-radius: 100px;
 }
 
-.thumbnail:hover {
-    transform: scale(1.1);
-}
-
-.active-thumbnail {
-    border: 2px solid var(--white-color);
-    transform: scale(1.1);
-}
-
-.image-preview {
-    width: 100% !important;
-    height: auto !important;
-    max-height: 100%;
-    object-fit: contain;
+.carousel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .carousel-index {
@@ -49,12 +52,45 @@
     font-size: 18px;
     font-weight: bold;
     color: white;
-    text-align: center;
 }
 
-@media (max-width: 1024px) {
-    .modal-preview-container .carousel-inner {
-        width: 100%;
-        height: 50vh !important;
+@keyframes scale-up {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.3);
+    }
+
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+.carousel-dots {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: gray;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.dot.active-dot {
+    background-color: white;
+    animation: scale-up 0.3s ease-in-out;
+}
+
+@media (min-width: 1200px) {
+    .modal-xl:has(.modal-preview-container) {
+        --bs-modal-width: 80vw;
     }
 }
