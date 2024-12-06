@@ -1,8 +1,8 @@
 import React from "react";
-import "./HomeSubBanner.css";
-import subBanner from "src/assets/images/img-1.webp";
 import logoContent from "src/assets/images/HTC_logo_White_1.png";
 import subBigBanner from "src/assets/images/banner.webp";
+import subBanner from "src/assets/images/img-1.webp";
+import "./HomeSubBanner.css";
 
 const HomeSubBanner: React.FC = () => {
   const tagIcon = (
@@ -29,7 +29,7 @@ const HomeSubBanner: React.FC = () => {
 
   return (
     <div className="sub-banner-container">
-      <div className="sub-banner row">
+      <div className="sub-banner row  animate-me">
         <div className="sub-banner-image-container col-lg-6 col-sm-12">
           <img src={subBanner} alt="sub-banner" className="sub-banner-image" />
         </div>
@@ -48,7 +48,7 @@ const HomeSubBanner: React.FC = () => {
         </div>
       </div>
 
-      <div className="sub-banner row">
+      <div className="sub-banner row  animate-me">
         <img src={subBigBanner} alt="logo-content" className="sub-big-banner" />
       </div>
     </div>

@@ -9,7 +9,7 @@ const HomeTeam: React.FC = () => {
   };
 
   return (
-    <div className="home-team-container">
+    <div className="home-team-container  animate-me">
       <div className="home-team">
         <div className="team-title-container">
           <svg width="21" height="26" viewBox="0 0 12 15" fill="none" xmlns="http://www.w3.org/2000/svg">
